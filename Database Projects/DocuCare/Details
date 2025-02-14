@@ -1,1 +1,0 @@
-The following databases are for our capstone project, a web-based clinical documentation system. DocuData.sql handles the core system data, while DocuData_Doctors.sql is specifically designed for storing doctors orders and medication orders. This folder also includes the corresponding ERDs and DFDs.
