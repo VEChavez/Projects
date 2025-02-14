@@ -1,0 +1,1 @@
+A small relational database for a web-based book inventory system, featuring tables for books, borrowers, inventory, and admin accounts. This system enables administrators to monitor borrowed books and available inventory.
