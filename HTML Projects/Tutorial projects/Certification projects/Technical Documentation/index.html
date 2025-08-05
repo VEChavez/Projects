@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8:" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>CSS documentation page</title>
+  </head>
+
+  <body>
+      <nav id="navbar">
+        <header>CSS Documentation</header>
+        <ul>
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li><a class="nav-link" href="#Prerequisites">Prerequisites</a></li>
+          <li><a class="nav-link" href="#Syntax">Syntax</a></li>
+          <li><a class="nav-link" href="#Selectors">Selectors</a></li>
+          <li><a class="nav-link" href="#Box_Model">Box model</a></li>
+          <li><a class="nav-link" href="#Units">Units</a></li>
+          <li><a class="nav-link" href="#Text_Formatting">Text Formatting</a></li>
+          <li><a class="nav-link" href="#Flexbox">Flexbox</a></li>
+          <li><a class="nav-link" href="#Positioning">Positioning</a></li>
+          <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+      </nav>
+    
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+
+        <p>
+          Cascading Style Sheets — or CSS — is the first technology you should start learning after HTML. While HTML is used to define 
+          the structure and semantics of your content, CSS is used to style it and lay it out. For example, you can use CSS to alter 
+          the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative 
+          features. This article explains what CSS is with a simple syntax example and also covers some key terms about the language.
+        </p>
+      </section>
+
+      <section class="main-section" id="Prerequisites">
+        <header>Prerequisites</header>
+
+        <p>
+          You should learn the basics of HTML before attempting any CSS. Once you understand the fundamentals of HTML, we recommend 
+          that you learn further HTML and CSS at the same time, moving back and forth between the two topics. This is because HTML is 
+          far more interesting and much more fun to learn when you apply CSS, and you can't learn CSS without knowing HTML.
+          <br><br>Before starting this topic, you should also be familiar with using computers and using the web passively (i.e., just 
+          looking at it, consuming the content). You should have a basic work environment set up, as detailed in Installing basic 
+          software, and understand how to create and manage files, as detailed in Dealing with files.
+        </p>
+      </section>
+
+      <section class="main-section" id="Syntax">
+        <header>Syntax</header>
+
+        <p>
+          CSS syntax consists of a set of rules that define how elements on a web page should be displayed. It contains a selector and 
+          a declaration block.<br> Here is an example:
+        </p>
+
+        <code>
+            h1 {
+              color: red;
+            }
+        </code>
+
+        <p>
+          The following applies a style to all &lt;h1&gt; elements on a webpage. Specifically, it sets the text color of all &lt;h1&
+          gt; elements to red. Here's a breakdown:
+        </p>
+
+        <ul>
+          <li><span>"h1":</span> This is the selector, targeting all &lt;h1&gt; elements.</li>
+          <li><span>"{}":</span> Curly braces enclose the CSS rules to be applied.</li>
+          <li><span>"color: red;":</span> This is the CSS property and value pair. The color property changes the text color, and red 
+          is the value assigned to it.</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Selectors">
+        <header>Selectors</header>
+        <p>
+          A CSS selector is a pattern used to select and style elements on a webpage. CSS selectors can target elements based on their 
+          name, id, class, attribute, and more. The following are some common types of CSS selectors:
+        </p>
+
+        <ul>
+          <li>
+            <span>Universal selector:</span> Targets all elements on a webpage. Universal selector  uses the '*' symbol.<br> 
+            Example: * selects all elements of the webpage. removing both their padding and margin. 
+            <code>
+                /*Universal selector */
+                * {
+                  margin: 0;
+                  padding: 0;
+                } 
+            </code>
+            Keep in mind that it can be overridden by more specific selectors e.g., Element selectors, Class selectors, ID selectors, 
+            etc.
+          </li>
+
+          <li>
+            <span>Element selector:</span> Selects all elements of a given type.<br>
+            Example: p selects all &lt;p&gt; elements changing their font color to red.
+            <code>
+                /* Element selector */
+                p {
+                  color: red;
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>Class selector:</span> Targets all elements with a specific class.<br>
+            Example: .button targets all elements with class="button" giving the element with a class of "button" a padding of 10px. 
+            <code>
+                /* Class selector */
+                .button {
+                  padding: 10px;
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>ID selector:</span> Targets one element with a specific id. <br>
+            Example: #header targets the element with id="header" giving the element with the specific id "header" a background color 
+            of blue.
+            <code>
+                /* ID selector */
+                #header {
+                  background-color: blue;
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>Attribute selector:</span> Targets elements with a specific attribute.<br>
+            Example: [type="text"] targets input elements with type="text" giving the input element that has the type "text" a 
+            border of 1px, a border style of solid, and a black border color. 
+            <code>
+                /* Attribute selector */
+                input[type="text"] {
+                  border: 1px solid black;
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>Pseudo element selector:</span> Targets specific parts of an element.<br>
+            Example: p::before Adds content before the element's actual content, adding the word "Note: " in blue colored font 
+            before the p element.
+            <code>
+                p::before {
+                  content: "Note: ";
+                  color: blue;
+                  }
+            </code>
+          </li>
+
+          <li>
+            <span>Pseudo class selector:</span> Targets elements in a specific state.<br>
+            Example: a:hover Applies styles when the user hovers over an anchor (a) element, making it so when you hover your 
+            cursor on an anchored element, it will change its font color to red.
+            <code>
+                a:hover {
+                  color: red;
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>Decendant selector:</span> Targets elements inside another element.<br> 
+            Example: div p targets &lt;p&gt; tags inside &lt;div&gt; tags, changing the font size of p elements that are inside 
+            div tags to 14px.
+            <code>
+                /* Descendant selector */
+                div p {
+                  font-size: 14px;
+                }
+            </code>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Box_Model">
+        <header>Box Model</header>
+        <p>
+          In CSS, the term "box model" is used when talking about design and layout.
+          The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and 
+          margins. The figure below illustrates the box model:
+        </p>
+        <div class="box-figure">
+          <div class="margin">
+            <div class="border">
+              <div class="padding">
+                <div class="content">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="box-info">
+          <li>
+            <span>Margin:</span> The margin is an invisible space around your box. It pushes other elements away from the box. Margins 
+            can have positive or negative values. Setting a negative margin on one side of your box can cause it to overlap other 
+            things on the page.
+          </li>
+
+          <li>
+            <span>Border:</span> The border is drawn between the margin and the padding of a box. If you are using the standard box 
+            model, the size of the border is added to the width and height of the content box. If you are using the alternative box 
+            model, then the bigger the border is, the smaller the content box is, as the border takes up some of that available width 
+            and height of the element box.
+          </li>
+
+          <li>
+            <span>Padding:</span> The padding sits between the border and the content area and is used to push the content away from 
+            the border. Unlike margins, you cannot have a negative padding. Any background applied to your element will display behind 
+            the padding.
+          </li>
+
+          <li>
+            <span>Content:</span> The content refers to the actual text or media inside an HTML element. This is the core part of the 
+            box model, around 
+            which other components (padding, border, and margin) are arranged.
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Units">
+        <header>Units</header>
+
+        <p>
+          In CSS, units are used to define the measurements for various properties, such as width, height, margin, padding, and font 
+          size. Units can be relative or absolute, determining how an element's size is calculated and displayed on different screens 
+          or devices. Here are the commonly used units in CSS:
+        </p>
+
+        <ul class="unit-list">
+          <li>
+            <span>px (pixels):</span> A pixel is a fixed unit of measurement corresponding to a single dot on a display screen.<br>
+            Example:
+            <code>
+                .box {
+                  width: 200px;
+                  height: 100px;
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>% (percent):</span> A percentage unit is relative to the dimensions of the parent element.<br>
+            Example:
+            <code>
+                .container {
+                  width: 100%;
+                  height: 50%;
+                  }
+            </code>
+          </li>
+
+          <li>
+            <span>em:</span> The em unit is relative to the font size of the element's parent. One em equals the current font size.<br>
+            Example:
+            <code>
+                .text {
+                  font-size: 1.5em; /* 1.5 times the size of the parent element’s font size */
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>vw (viewport width):</span> One vw is equal to 1% of the viewport’s width.<br>
+            Example:
+            <code>
+                .full-width {
+                  width: 100vw; /* 100% of the viewport width */
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>vh (viewport height):</span> One vh is equal to 1% of the viewport’s height.<br>
+            Example:
+            <code>
+                .full-height {
+                  height: 100vh; /* 100% of the viewport height */
+                }
+            </code>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Text_Formatting">
+        <header>Text Formatting</header>
+        <p>
+          In CSS, there are numerous ways to format text beyond basic structure. Here are some key properties and techniques for text 
+          formatting:
+        </p>
+
+        <ul class="text-format-list">
+          <li>
+            <span>Font Properties:</span>
+            <ul>
+              <li><span>font-family:</span> Specifies the font family for text</li>
+              <li><span>font-size:</span> Sets the size of the font</li>
+              <li><span>font-weight:</span> Specifies the boldness of the font.</li>
+              <li><span>font-style:</span> Sets the style of the font (normal, italic, oblique).</li>
+            </ul>
+            Example:
+            <code>
+                body {
+                  font-family: Arial, sans-serif;
+                  font-size: 16px;
+                  font-weight: normal;
+                  font-style: italic;
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>Text color and alignment:</span>
+            <ul>
+              <li><span>color:</span> Sets the color of the text.</li>
+              <li><span>text-align:</span> Aligns the text within its container (left, right, center, justify).</li>
+              <li><span>text-decoration:</span> Specifies decorations added to text (underline, overline, line-through, none).</li>
+            </ul>
+            Example:
+            <code>
+                .content {
+                  color: #333333;
+                  text-align: center;
+                  text-decoration: underline;
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>Spacing and Line Height:</span>
+            <ul>
+              <li><span>line-height:</span> Sets the height of a line of text.</li>
+              <li><span>letter-spacing:</span> Adjusts the space between characters.</li>
+              <li><span>word-spacing:</span> Controls the space between words.</li>
+            </ul>
+            Example:
+            <code>
+                p {
+                  line-height: 1.5;
+                  letter-spacing: 1px;
+                  word-spacing: 2px;
+                  }
+            </code>
+          </li>
+        </ul>
+
+      </section>
+      
+      <section class="main-section" id="Flexbox">
+        <header>Flexbox</header>
+        <p>
+          Flexbox, or the Flexible Box Layout module in CSS, is a powerful layout system designed to make it easier to design
+          responsive and flexible layouts. It provides a more efficient way to align and distribute space among items in a container,
+          even when their size is unknown or dynamic. To use Flexbox, you first designate a container as a flex container by setting 
+          its display property to flex or inline-flex. This property turns all direct children of the container into flex items  
+          Example:
+        </p>
+
+        <code>
+            .container {
+              display: flex; /* or inline-flex */
+            }
+        </code>
+      </section>
+
+      <section class="main-section" id="Positioning">
+        <header>Positioning</header>
+        <p>
+          CSS positioning allows you to precisely place elements on a web page relative to their normal position in the document flow 
+          or relative to their parent container. There are several types of positioning in CSS, each serving different purposes. 
+          Here's an overview of the main types:
+        </p>
+
+        <ul>
+          <li>
+            <span>Static positioning:</span> This is the default positioning for HTML elements. Elements with position: static; are 
+            positioned according to the normal flow of the document. Top, bottom, left, right, and z-index properties do not apply to 
+            statically positioned elements.
+          </li>
+
+          <li>
+            <span>Relative Positioning:</span> When you set position: relative; on an element, it retains its normal flow position, \
+            but you can offset it using top, bottom, left, and right properties.<br>
+            Example:
+            <code>
+                .relative-box {
+                  position: relative;
+                  top: 10px;
+                  left: 20px;
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>Absolute Positioning:</span> Elements with position: absolute; are removed from the normal document flow and 
+            positioned relative to the nearest positioned ancestor (an ancestor element with a position other than static), or the 
+            initial containing block if no positioned ancestor is found.<br>
+            Example:
+            <code>
+                .absolute-box {
+                  position: absolute;
+                  top: 50px;
+                  left: 100px;
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>Fixed Positioning:</span> Elements with position: fixed; are removed from the normal document flow and are 
+            positioned relative to the viewport (the browser window).<br>
+            Example:
+            <code>
+                .fixed-box {
+                  position: fixed;
+                  top: 20px;
+                  right: 20px;
+                }
+            </code>
+          </li>
+
+          <li>
+            <span>Sticky Positioning:</span> Sticky positioning is a hybrid of relative and fixed positioning. The element is treated 
+            as relative positioned until it crosses a specified threshold (typically the top or bottom of its parent container), at 
+            which point it becomes fixed positioned.<br>
+            Example:
+            <code>
+                .sticky-box {
+                  position: sticky;
+                  top: 10px;
+                }
+            </code>
+          </li>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <ul>
+          <li>
+            All the documentation in this page is taken from both <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">MDN</a>
+            and <a href="https://www.w3schools.com/css/default.asp">W3Schools</a>.
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

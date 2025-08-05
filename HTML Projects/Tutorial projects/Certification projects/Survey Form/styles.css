@@ -1,0 +1,98 @@
+body {
+    width: 100vw;
+    margin: 0;
+    font-family: Tahoma;
+    font-size: 16px;
+    background-image:linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(https://lh3.googleusercontent.com/p/AF1QipN_aPWAcaymp5mlMQRhwSUa289CGbHAifICzESx=s1360-w1360-h1020);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    overflow-x: hidden;
+  }
+  
+  h1,p{
+    text-align:center;
+  }
+  
+  .navbar {
+    background-color: maroon;
+    height: 85px;
+    width: 100vw;
+    color: white;
+    padding: 5px 0 5px 5px;
+    font-size: 20px;
+  }
+  
+  .navbar img {
+    height: 85px;
+    width: auto;
+    padding-left: 20px;
+    vertical-align: middle;
+  }
+  
+  .navbar p {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  label{
+    display:block;
+    margin:5px 0;
+    padding:5px
+  }
+
+
+  
+  form{
+    width: 100%;
+    max-width:500px;
+    min-width:300px;
+    margin: 50px auto;
+    padding: 2em;
+    background-color:rgba(255,255,255);
+    border-radius:10px;
+    border:3px solid maroon;
+    box-shadow: 5px 5px 5px gray;
+  }
+  
+  form p{
+    text-align:left;
+  }
+  
+  fieldset{
+    border:none;
+    border-bottom:3px solid maroon;
+  }
+  
+  hr{
+    border:3px solid maroon;
+  }
+  
+  input, textarea{
+    width: 100%; /* Make the input boxes, select dropdown, and textarea span the full width */
+  padding: 10px; /* Add padding to provide space inside the input boxes */
+  box-sizing: border-box;
+  }
+  
+  textarea{
+    margin-top: 5px;
+  }
+  
+  .inline{
+    width:unset;
+  }
+  
+  legend{
+    padding-top:10px
+  }
+  
+  fieldset:last-of-type {
+    border-bottom: none;
+  }
+  
+  input[type="submit"]{
+    background-color:maroon;
+    color:white;
+    padding:5px;
+  }

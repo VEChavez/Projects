@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css" />
+    <title>UB Demographic Survey</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="content">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/UBlogo.png/800px-UBlogo.png" alt="UB logo"/>
+      <p> <strong>University of <br> Batangas</p>
+      </div>
+    </div>
+  <main>
+      <form id="survey-form">
+        <h1 id="title">University of Batangas Demographic Survey</h1>
+      <p id="description">Thank you for participating in this survey! The information gathered from this survey will be used to improve the university's services. We ensure you that the data gathered here will be confidential and will not be used in any malicious activities.</p>
+      <hr>
+        <!--fieldset for gen info-->
+        <fieldset id="gen-info">
+          <legend>General information</legend>
+          <label id="name-label" for="name">
+            Name:
+            <input type="text" id="name" name="Name" placeholder="Enter your name here."required/>
+          </label>
+
+          <label id="email-label" for="email">
+            Email:
+            <input type="email" id="email" name="Email" placeholder="Enter your email here."required>
+          </label>
+
+          <label id="number-label" for="number">
+            Age (optional):
+            <input type="number" id="number" name="Age" min="17" max="120" placeholder="Enter your age here."/>
+          </label>
+
+            <p>Gender:</p>
+            <label id="gender-male" for="male">
+              <input type="radio" id="male" name="Gender" value ="0" class="inline" required>Male
+            </label>
+
+            <label id="gender-female" for="female">
+              <input type="radio" id="female" name="Gender" value="1" class="inline" required>Female
+            </label>
+
+            <label id="gender-other" for="other">
+              <input type="radio" id="other" name="Gender" value ="2" class="inline" required>Other (please specify below.)
+            </label>
+
+            <label id="gender-not-say" for="prefer-not-to-say">
+              <input type="radio" id="prefer-not-to-say" name="Gender" value="3" class="inline" required>Prefer not to say
+            </label>
+
+            <label id="gender-specify" for="specify">
+              For those who chose "other" please specify your gender:
+              <textarea id="specify" name="OtherGender" placeholder="Please specify your gender here."></textarea>
+            </label>
+        </fieldset>
+
+         <!--fieldset for educ details-->
+        <fieldset id="edu-details">
+          <legend>Educational details</legend>
+          <label id="Year-lvl-label" for="dropdown">
+            Year Level:
+            <select id="dropdown" name="YearLvl" required>
+              <option value="" disable selected>
+                Select year level
+              </option>
+            
+              <option value="0">
+                First year
+              </option>
+
+              <option value="1">
+                Second year
+              </option>
+
+              <option value="2">
+                Third year
+              </option>
+
+              <option value="3">
+                Fourth year
+              </option>
+            </select>
+          </label>
+
+          <p>Select your college department:</p>
+          <label id="dept-citec" for="citec">
+            <input type="radio" id="citec" name="CollegeDept" value="0" class="inline" checked required/> CITEC
+          </label>
+
+          <label id="dept-cenar" for="cenar">
+            <input type="radio" id="cenar" name="CollegeDept" value="1" class="inline" required/> CENAR
+          </label>
+
+          <label id="dept-ceas" for="ceas">
+            <input type="radio" id="ceas" name="CollegeDept" value="2"class="inline" required/> CEAS
+          </label>
+        </fieldset>
+
+        <!--fieldset for conditions-->
+        <fieldset id="Mental-Health">
+          <legend>Mental health conditions</legend>
+          <p>Please indicate any health concerns you may have:</p>
+
+          <label id="mental-health-depression" for="depression">
+            <input type="checkbox" id="depression" name="Depression" value="depression" class="inline"/>Depression
+          </label>
+
+          <label id="mental-health-anxiety" for="anxiety">
+            <input type="checkbox" id="anxiety" name="Anxiety" value="anxiety" class="inline"/>Anxiety
+          </label>
+
+          <label id="mental-health-burnout" for="burnout">
+            <input type="checkbox" id="burnout" name="Burnout" value="burnout" class="inline"/>Burnout
+          </label>
+
+          <label id="mental-health-stress" for="stress">
+            <input type="checkbox" id="stress" name="Stress" value="stress" class="inline"/>Stress
+          </label>
+
+          <label id="mental-health-low-self-esteem" for="low-self-esteem">
+            <input type="checkbox" id="low-self-esteem" name="SelfEsteem" value="low-self-esteem" class="inline"/>Low self-esteem
+          </label>
+
+          <label id="mental-health-lack-motivation" for="lack-motivation">
+            <input type="checkbox" id="lack-motivation" name="Motivation" value="lack-motivation" class="inline"/>Lack of motivation
+          </label>
+
+          <label id="mental-health-loneliness" for="loneliness">
+            <input type="checkbox" id="loneliness" name="Loneliness" value="loneliness" class="inline"/>Loneliness
+          </label>
+
+          <label id="mental-health-hopelessness" for="hopelessness">
+            <input type="checkbox" id="hopelessness" name="Hopelessness" value="hopelessness" class="inline"/>Hopelessness
+          </label>
+        </fieldset>
+        <input type="submit"  id="submit" value="Submit"/>
+      </form> 
+    </main> 
+  </body>
+</html>
