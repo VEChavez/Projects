@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset ="UTF-8"
+    <title>CatPhotoApp</title>
+  </head>
+  <body>
+    <!--main is used for the main topic or content of the website-->
+    <main>
+      <h1>CatPhotoApp</h1>
+      <!--section is used to group related content that is in the webpage -->
+      <section>
+        <h2>Cat Photos</h2>
+        <!-- turned an image clickable, redirecting users to another website -->
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+      </section>
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <!--unordered list creates a list using bullets instead of numbers-->
+        <ul>
+          <li>cat nip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <!--figure is kinda the same with main and section but its for images instead. figcaption adds text below the image.-->
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <!--ordered list creates a list using numbers instead of bullets-->
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <!--form action sends the data typed in or images or videos uploaded to the url specified-->
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <!--fieldset is kinda the same with main and section but its for forms instead. It basically groups forms.
+          legend is kinda the same with figcaption where it adds texts-->
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <!-- ID = needs to be unique. LABEL = categorizes or groups form controls. TYPE = what kind of form is it? either a 
+            button or password or text, etc. NAME = whatever is inside the textbox or whatever, the value of name will be the one sent to 
+            the database. -->
+            <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
+          </fieldset>
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <!--specifically selected the website in the text as the clickable link to another website-->
+      <p>
+        No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+      </p>
+    </footer>
+  </body>
+</html>
